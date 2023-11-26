@@ -35,14 +35,11 @@ function App() {
     setImc(imcResult);
 
     readData();
-
-    console.log(`IMC = ${imc}`)
-}
+  }
 
   return (
   <div className='container'>
-    {/*<ImcCalc funcCalc={calcutateImc}/>*/}
-    <ImcTable/>
+    {!imc ? <ImcCalc funcCalc={calcutateImc}/> : <ImcTable imcData = {data} imc = {imc} info = {info}/>}
   </div>
   )
 }
