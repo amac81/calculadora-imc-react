@@ -25,6 +25,7 @@
 .form-control input {
   padding: 0.6rem;
   color: #444;
+  font-size: 1rem;
 }
 
 .action-control {

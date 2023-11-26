@@ -14,9 +14,9 @@ function App() {
     return +text.replace(",",".");
   }
 
-  const readData = () => {
+  const readData = (imcValue) => {
     data.forEach((item) => {
-      if(imc >= item.min && imc <= item.max){
+      if(imcValue >= item.min && imcValue <= item.max){
         setInfo(item.info);
         setInfoClass(item.infoClass);
       }
@@ -34,12 +34,19 @@ function App() {
     const imcResult = (fWeight / (fHeight * fHeight)).toFixed(1);
     setImc(imcResult);
 
-    readData();
+    readData(imcResult);
+  }
+
+  const resetCalc = (e) => {
+    e.preventDefault();
+    setImc("");
+    setInfo("");
+    setInfoClass("");
   }
 
   return (
   <div className='container'>
-    {!imc ? <ImcCalc funcCalc={calcutateImc}/> : <ImcTable imcData = {data} imc = {imc} info = {info} infoClass = {infoClass}/>}
+    {!imc ? <ImcCalc funcCalc={calcutateImc}/> : <ImcTable imcData = {data} imc = {imc} info = {info} infoClass = {infoClass} resetCalcFunc={resetCalc}/>}
   </div>
   )
 }

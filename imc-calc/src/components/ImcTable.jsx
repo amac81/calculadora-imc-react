@@ -1,6 +1,20 @@
+import Button from "./Button";
 import "./ImcTable.css"
 
-const ImcTable = ({imcData, imc, info, infoClass}) => {
+const ImcTable = ({imcData, imc, info, infoClass, resetCalcFunc}) => {
+
+  // Function to generate dynamic class names
+  const generateClassNames = (item) => {
+    let classNames = "table-data";
+
+    if(item.info === `${info}`) {
+        classNames += ` ${infoClass}`;
+        classNames += " ";
+        classNames += "bigger-text";
+    }
+    return classNames;
+  };    
+  
   return (
     <div id="result-container">
         <p id="imc-value">O seu IMC: <span className={infoClass}>{imc}</span></p>
@@ -13,13 +27,14 @@ const ImcTable = ({imcData, imc, info, infoClass}) => {
                 <h4>Obesidade</h4>
             </div>
                 {imcData.map((item) => (
-                    <div key={item.info} className="table-data">
+                    <div key={item.info} className={generateClassNames(item)}>
                         <p>{item.classification}</p>
                         <p>{item.info}</p>
                         <p>{item.obesityDegree}</p>
                     </div>
                 ))}
         </div>
+        <Button id="back-btn" text="Voltar" action={resetCalcFunc}/>
 
     </div>
   )
