@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button"
 import "./ImcCalc.css"
 
-const ImcCalc = () => {
+const ImcCalc = ({funcCalc}) => {
   // Hooks de manipulação de dados 
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -13,12 +13,6 @@ const ImcCalc = () => {
     setWeight("");
 
     console.log("cleaning")
-  }
-
-  const calcImc = (e) => {
-    e.preventDefault();
-
-    console.log("calculating...")
   }
 
   const inputValidate = (text) =>{
@@ -65,7 +59,7 @@ const ImcCalc = () => {
                 </div>
             </div>
             <div className="action-control">
-                <Button id = "btn-calc" text = "Calcular" action = {calcImc}/>
+                <Button id = "btn-calc" text = "Calcular" action = {(e) => {funcCalc(e, height, weight)}}/>
                 <Button id = "btn-clear" text = "Limpar" action = {resetCalc}/>
             </div>
         </form>
