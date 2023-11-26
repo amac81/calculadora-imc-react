@@ -16,7 +16,6 @@
 
 #imc-info{
   font-size: 1.2rem;
-  color:#ccc;
 }
 
 #imc-table {
@@ -46,4 +45,29 @@
 .table-header h4:nth-child(3),
 .table-data p:nth-child(3){
   max-width: 80px;
+}
+
+#back-btn {
+  align-self: center;
+}
+
+.good {
+  color:#27f527;
+}
+
+.low {
+  color:#fff45f;
+}
+
+.medium {
+  color:#ff9c50;
+}
+
+.high {
+  color:#ff3737;
+}
+
+.bigger-text{ 
+  font-weight: bold;
+  font-size: 15px;
 }
