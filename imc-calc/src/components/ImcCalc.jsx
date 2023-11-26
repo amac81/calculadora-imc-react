@@ -1,7 +1,17 @@
+import { useState } from "react";
 import Button from "./Button"
 import "./ImcCalc.css"
 
 const ImcCalc = () => {
+  // Hooks de manipulação de dados 
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+
+  const resetCalc = (e) => {
+    e.preventDefault();
+    setHeight("");
+    setWeight("");
+  }
     
   return (
     <div id="calc-container">
@@ -15,6 +25,7 @@ const ImcCalc = () => {
                         name="height"
                         id="height"
                         placeholder="Exemplo: 1,76" 
+                        
                     />
                 </div>
                 <div className="form-control">
@@ -24,12 +35,13 @@ const ImcCalc = () => {
                         name="weight"
                         id="weight"
                         placeholder="Exemplo: 68" 
+                        
                     />
                 </div>
             </div>
             <div className="action-control">
                 <Button id = "btn-calc" text = "Calcular"/>
-                <Button id = "btn-clear" text = "Limpar"/>
+                <Button id = "btn-clear" text = "Limpar" action = {resetCalc}/>
             </div>
         </form>
     </div>
