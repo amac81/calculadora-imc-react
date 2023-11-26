@@ -1,6 +1,6 @@
 # Calculadora de IMC com React 
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/amac81/calculadoraIMC-react/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/amac81/calculadoraIMC-react/blob/main/LICENSE) 
 
 # About the project
 
