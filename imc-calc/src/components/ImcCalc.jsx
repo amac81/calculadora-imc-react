@@ -21,13 +21,15 @@ const ImcCalc = ({funcCalc}) => {
   }
 
   const handleHeightChange = (e) => {
-    const heigthtOk = inputValidate(e.target.value);
-    setHeight(heigthtOk);
+    const heightValidated = inputValidate(e.target.value);
+    const heightValue = +heightValidated.replace(",",".");
+    heightValue > 2.70 ? setHeight("") : setHeight(heightValidated); 
   }
 
   const handleWeightChange = (e) => {
-    const weigthtOk = inputValidate(e.target.value);
-    setWeight(weigthtOk);
+    const weightValidated = inputValidate(e.target.value);
+    const weightValue = +weightValidated.replace(",",".");
+    weightValue > 600 ? setWeight(""): setWeight(weightValidated);
   }
     
   return (
