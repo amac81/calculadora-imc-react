@@ -2,6 +2,7 @@ import './App.css'
 import ImcCalc from './components/ImcCalc'
 import { useState } from 'react';
 import {data} from './data/data'
+import ImcTable from './components/ImcTable';
 
 function App() {
   // Hooks de manipulação de dados 
@@ -40,7 +41,8 @@ function App() {
 
   return (
   <div className='container'>
-    <ImcCalc funcCalc={calcutateImc}/>
+    {/*<ImcCalc funcCalc={calcutateImc}/>*/}
+    <ImcTable/>
   </div>
   )
 }
