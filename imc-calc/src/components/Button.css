@@ -1,0 +1,21 @@
+button {
+  text-transform: uppercase;
+  padding: 1.1rem;
+  font-size: 1rem;
+  flex: 1; /* para ocupar o máximo de espaço possível no flex*/
+  border: none;
+  color: #fefefe;
+  background-color: #01112c;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+button:hover {
+  opacity: 1;
+  transition: 0.5s;
+  font-size: 17px;
+}
+
+#btn-clear {
+  background-color: rgb(34, 50, 78)
+}
