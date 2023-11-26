@@ -11,6 +11,29 @@ const ImcCalc = () => {
     e.preventDefault();
     setHeight("");
     setWeight("");
+
+    console.log("cleaning")
+  }
+
+  const calcImc = (e) => {
+    e.preventDefault();
+
+    console.log("calculating...")
+  }
+
+  const inputValidate = (text) =>{
+    const convertedText = text.replace(/[^0-9,]/g, ""); // digitos de 0 a 9 e a vírgula, todas as ocorrências na string
+    return convertedText;
+  }
+
+  const handleHeightChange = (e) => {
+    const heigthtOk = inputValidate(e.target.value);
+    setHeight(heigthtOk);
+  }
+
+  const handleWeightChange = (e) => {
+    const weigthtOk = inputValidate(e.target.value);
+    setWeight(weigthtOk);
   }
     
   return (
@@ -25,7 +48,8 @@ const ImcCalc = () => {
                         name="height"
                         id="height"
                         placeholder="Exemplo: 1,76" 
-                        
+                        value={height}
+                        onChange={handleHeightChange}
                     />
                 </div>
                 <div className="form-control">
@@ -35,12 +59,13 @@ const ImcCalc = () => {
                         name="weight"
                         id="weight"
                         placeholder="Exemplo: 68" 
-                        
+                        value={weight}
+                        onChange={handleWeightChange}
                     />
                 </div>
             </div>
             <div className="action-control">
-                <Button id = "btn-calc" text = "Calcular"/>
+                <Button id = "btn-calc" text = "Calcular" action = {calcImc}/>
                 <Button id = "btn-clear" text = "Limpar" action = {resetCalc}/>
             </div>
         </form>
