@@ -1,3 +1,4 @@
+import Button from "./Button"
 import "./ImcCalc.css"
 
 const ImcCalc = () => {
@@ -27,8 +28,8 @@ const ImcCalc = () => {
                 </div>
             </div>
             <div className="action-control">
-                <button>Calcular</button>
-                <button>Limpar</button>
+                <Button id = "btn-calc" text = "Calcular"/>
+                <Button id = "btn-clear" text = "Limpar"/>
             </div>
         </form>
     </div>
