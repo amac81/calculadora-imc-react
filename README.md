@@ -38,14 +38,11 @@ A aplicação é executado em **http://localhost:5173**
 
 #### Componentes
 
-1. **ImcCalc** Componente : Componente responsável pela entrada de dados (altura e peso), pela sua validação e chamada de função de cálculo de IMC, implementada no componente principal App.jsx.
+1. **ImcCalc**: Componente responsável pela entrada de dados (altura e peso), pela sua validação e chamada de função de cálculo de IMC, implementada no componente principal App.jsx.
 
-2. **ImcTable** Componente : Este Componente mostra informações gerais sobre o IMC e informações personalizadas de acordo com os dados de altura e peso inseridos pelo utilizador. Este componente obtém os dados a partir de um ficheiro js na pasta data.
+2. **ImcTable**: Este Componente mostra informações gerais sobre o IMC e informações personalizadas de acordo com os dados de altura e peso inseridos pelo utilizador. Este componente obtém os dados a partir de um ficheiro js na pasta data.
 
-3. **Button** Componente : Este Componente representa um elemento de botão. É renderizado dentro dos Componentes ImcTable e ImcCalc. Há uma relação de pai e filho entre esses componentes. Esta composição de componentes facilita a organização e a reutilização de código em aplicações React.
-
-
-
+3. **Button**: Este Componente representa um elemento de botão. É renderizado dentro dos Componentes ImcTable e ImcCalc. Há uma relação de pai e filho entre esses componentes. Esta composição de componentes facilita a organização e a reutilização de código em aplicações React.
 
 
 # Autor
