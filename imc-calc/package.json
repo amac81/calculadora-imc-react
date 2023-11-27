@@ -1,5 +1,6 @@
 {
   "name": "imc-calc",
+  "homepage": "https://amac81.github.io/calculadoraIMC-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
