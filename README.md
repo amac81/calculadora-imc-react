@@ -1,41 +1,54 @@
-# Calculadora de IMC com React 
-# Projeto React JS Simples
+# Calculadora de IMC (projeto React Js Simples)
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/amac81/calculadoraIMC-react/blob/main/LICENSE) 
 
-# About the project
+# Acerca do projeto
 
 Calculadora de IMC com React, html, css and Javascript.
 
-## What is the use of this Repo
+## Qual é a utilidade deste repositório
 
-This Project is a Simple ReactJS Project which demonstrates the following:
-1. Creating Components in React
-2. Communicating between parent and child component
+Este projeto demonstra:
+1. Criação de Componentes no React
+2. Comunicação entre o componente pai e filho
 
-## Prerequisites
+## Prerequisitos
 
-### Install Node JS
-Refer to https://nodejs.org/en/ to install nodejs
+### Instalar o Node JS
+Consultar https://nodejs.org/en/
 
-Clone the project into local
+Clone o projeto localmente
 
-Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+Instale todos os pacotes npm. Aceder à pasta do projeto (/../imc-calc/) e digite o seguinte comando para instalar todos os pacotes npm:
 
 ```bash
 npm install
 ```
 
-In order to run the application Type the following command
+Para executar a aplicação digite o seguinte comando na mesma pasta (/../imc-calc/)
 
 ```bash
 npm start
 ```
 
-The Application Runs on **http://localhost:5173**
+A aplicação é executado em **http://localhost:5173**
 
 
-# Author
+## Design da aplicação
+
+#### Componentes
+
+1. **ImcCalc** Componente : Componente responsável pela entrada de dados (altura e peso), pela sua validação e chamada de função de cálculo de IMC, implementada no componente principal App.jsx.
+
+2. **ImcTable** Componente : Este Componente mostra informações gerais sobre o IMC e informações personalizadas de acordo com os dados de altura e peso inseridos pelo utilizador. Este componente obtém os dados a partir de um ficheiro js na pasta data.
+
+3. **Button** Componente : Este Componente representa um elemento de botão. É renderizado dentro dos Componentes ImcTable e ImcCalc. Há uma relação de pai e filho entre esses componentes. Esta composição de componentes facilita a organização e a reutilização de código em aplicações React.
+
+
+
+
+
+# Autor
 
 Arnaldo Manuel de Almeida Canelas
 
